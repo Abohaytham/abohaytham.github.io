@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>عبدالله هيثم | مونتاج وتصميم مواقع</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#eee4d5;--ink:#2a1d14;--mute:#76665a;--cu:#b9600f;--card:rgba(255,251,245,.82);--line:rgba(120,85,55,.16);--dk:#2a1d14}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);isolation:isolate;color:var(--ink);font-family:'Tajawal',Tahoma,sans-serif;line-height:1.9;font-size:16px;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+main{max-width:920px;margin:auto;padding:0 20px 60px}
+h1,h2,h3{line-height:1.4;margin:0}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);font-size:14px}
+.top nav a{color:var(--mute);text-decoration:none;margin-inline-start:18px}
+.top nav a:hover{color:var(--cu)}
+.hero{padding:44px 0 30px;display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.who{text-align:center}
+.who img{width:160px;height:160px;object-fit:cover;object-position:top;border-radius:50%;border:3px solid var(--cu);background:#777}
+.who b{display:block;margin-top:8px;font-size:18px}.who span{color:var(--mute);font-size:14px}
+.hero .t{flex:1;min-width:260px}
+.hero h1{font-size:clamp(28px,6vw,44px);font-weight:700}
+.hero h1 em{font-style:normal;color:var(--cu)}
+.hero p{color:var(--mute);margin:12px 0 0;max-width:48ch}
+.btn{display:inline-block;margin-top:16px;background:var(--cu);color:#fff;padding:10px 22px;border-radius:6px;text-decoration:none;font-weight:600}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);margin-inline-start:8px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:10px;background:var(--card);margin-top:8px}
+.stats div{padding:14px;text-align:center;border-inline-start:1px solid var(--line)}
+.stats div:first-child{border:0}
+.stats b{display:block;font-size:26px;color:var(--cu);line-height:1.3}.stats small{color:var(--mute)}
+h2{font-size:28px;margin:52px 0 6px;font-weight:700}
+.sub{color:var(--mute);margin:0 0 20px}
+.srv{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.srv>div{padding:22px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.srv .ic{width:42px;height:42px;border-radius:10px;background:var(--cu);color:#fff;display:grid;place-items:center;font-size:20px;margin-bottom:10px}
+.srv h3{font-size:20px}
+.srv ul{margin:10px 0 0;padding:0 18px 0 0;color:var(--mute)}
+.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.reel{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.reel video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:#000}
+.reel .c{padding:12px 14px}
+.reel h3{font-size:17px}.reel p{margin:4px 0 0;color:var(--mute);font-size:14px;line-height:1.7}
+.tags{margin:8px 0;display:flex;gap:6px;flex-wrap:wrap}
+.tags span{font-size:12px;border:1px solid var(--cu);color:var(--cu);border-radius:20px;padding:0 10px}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:18px 0}
+.proj .body{padding:22px}
+.proj h3{font-size:22px}
+.proj p{margin:8px 0}
+.val{border-right:3px solid var(--cu);padding-right:12px;margin-top:12px}
+.wide{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.wide .reel video{aspect-ratio:16/9}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.shots img{width:100%;height:100%;object-fit:cover;display:block}
+.lap{padding:22px 14px 8px;background:var(--dk)}
+.scr{max-width:680px;margin:auto;background:#111;border:9px solid #2c2c31;border-radius:12px 12px 0 0;aspect-ratio:16/10;overflow:hidden}
+.site{height:100%;background:#f8fafa;display:grid;grid-template-rows:9% 46% 1fr;gap:2%;padding:0 3% 3%;color:#222}
+.nav{display:flex;justify-content:space-between;align-items:center;font-size:clamp(8px,2vw,13px);border-bottom:1px solid #e5ecec}
+.nav span{color:#7fb4bd}
+.bn{width:100%;height:100%;object-fit:cover;border-radius:6px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3%;min-height:0}
+.grid div{background:#fff;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;min-height:0}
+.grid img{width:100%;flex:1;min-height:0;object-fit:cover}
+.grid small{font-size:clamp(7px,1.6vw,11px);padding:2px 5px;text-align:right}
+.base{max-width:760px;height:12px;margin:0 auto;background:linear-gradient(#d4d4d9,#8e8e95);border-radius:0 0 14px 14px}
+.phones{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.phones img{width:100%;border-radius:10px;border:1px solid var(--line)}
+.cap{display:block;color:var(--mute);margin-top:6px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;counter-reset:s}
+.steps div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+.steps div::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--bg);font-weight:700;margin-bottom:8px}
+.steps small{color:var(--mute);display:block;line-height:1.7}
+.tools{display:flex;gap:10px;flex-wrap:wrap}.tools span{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:6px 16px}
+.end{background:var(--ink);color:var(--bg);border-radius:14px;padding:34px 26px;margin-top:52px}
+.end h2{margin-top:0}.end p{opacity:.85}
+.end .btn{margin-inline-end:8px}
+.social{margin-top:14px}.social a{color:inherit;margin-inline-end:18px}
+footer{text-align:center;color:var(--mute);font-size:13px;margin-top:28px}
+@media (max-width:640px){.hero{justify-content:center;text-align:center;padding-top:32px}.hero p{margin-inline:auto}.who{width:100%}.stats small{display:block;line-height:1.5;font-size:13px}.stats div{padding:12px 6px}.reels{grid-template-columns:1fr 1fr}.wide{grid-template-columns:1fr}.top nav{display:none}.stats b{font-size:21px}}
+.live{display:inline-block;margin-top:14px;background:var(--ink);color:var(--bg);padding:8px 20px;border-radius:6px;text-decoration:none;font-weight:600}
+.live small{opacity:.7;font-weight:400;margin-inline-start:6px;direction:ltr;display:inline-block}
+.phones.tall img{aspect-ratio:375/750;object-fit:cover;object-position:top}
+.mock{padding:26px max(16px,calc((100% - 640px)/2));display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.mock img{width:100%;border-radius:22px;border:6px solid #111;box-shadow:0 10px 24px #0004;display:block}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+background:
+radial-gradient(60vmax 40vmax at 90% -10%,rgba(214,140,70,.22),transparent 60%),
+radial-gradient(50vmax 40vmax at -10% 60%,rgba(190,160,120,.25),transparent 60%),
+radial-gradient(rgba(120,85,55,.10) 1px,transparent 1.4px) 0 0/24px 24px,
+linear-gradient(180deg,#f4ece0 0%,#ede2d1 55%,#e8dccb 100%)}
+.srv>div,.reel,.proj,.steps div,.stats,.tools span{backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.proj,.reel,.srv>div,.stats{box-shadow:0 14px 34px -18px rgba(90,60,30,.35)}
+.hero h1{font-weight:800;line-height:1.35;text-wrap:balance}
+.hero p{font-size:18px}
+.end{background:linear-gradient(135deg,#3a2718,#22160e);color:#f6eee4}
+.end .btn{background:var(--cu);color:#fff}
+.steps div::before{background:var(--cu);color:#fff}
+.live{background:var(--ink);color:#fff}
+.btn.ghost{color:var(--ink);border-color:rgba(120,85,55,.35)}
+</style>
+</head>
+<body>
+<main>
+
+
+<section class="hero">
+ <div class="who"><img src="assets/orig00.jpg" alt="عبدالله هيثم"><b>عبدالله هيثم | Abdullah</b><span>مونتاج · تصميم مواقع ومتاجر</span></div>
+ <div class="t">
+  <h1>فيديو يوقف السكرول، وموقع يبيع.</h1>
+  <p>أصمّم محتوى الفيديو القصير وأبني المواقع والمتاجر للمحلات والشركات وصنّاع المحتوى، من الفكرة إلى الملف النهائي.</p>
+  <a class="btn" href="#contact">اطلب مشروعك</a><a class="btn ghost" href="#montage">شوف الأعمال</a>
+ </div>
+</section>
+
+<div class="stats">
+ <div><b>+3</b><small>سنوات في المونتاج والتصميم</small></div>
+ <div><b>2–4</b><small>أيام عمل للتسليم</small></div>
+ <div><b>8</b><small>أعمال في المعرض</small></div>
+</div>
+
+<h2 id="services">الخدمات</h2>
+<p class="sub">خدمتين تكمّل بعض: فيديو يجيب الانتباه، وموقع يحوّله لطلب.</p>
+<div class="srv">
+ <div><div class="ic">▶</div><h3>مونتاج الفيديو</h3>
+  <ul><li>ريلز وتيك توك وشورتس</li><li>موشن جرافيك ونصوص متحركة</li><li>فيديو تعريفي للشركات والمنتجات</li><li>تعليق صوتي بالذكاء الاصطناعي</li><li>باقات شهرية للمحتوى</li></ul></div>
+ <div><div class="ic">◧</div><h3>المواقع والمتاجر</h3>
+  <ul><li>صفحة تعريفية للمحل مع زر واتساب</li><li>مواقع من عدة صفحات</li><li>تصميم وإعداد متاجر سلة</li><li>بنرات وهوية بصرية</li><li>صيانة وتعديلات شهرية</li></ul></div>
+</div>
+
+<h2 id="montage">أعمال المونتاج</h2>
+<p class="sub">مقاطع حقيقية نفّذتها لعملاء ولحسابي.</p>
+<div class="reels">
+ <div class="reel"><video controls playsinline preload="none" poster="assets/poster-moxxvx.jpg" src="assets/moxxvx.mp4"></video>
+  <div class="c"><div class="tags"><span>صانع محتوى</span></div><h3>moxxvx | محتوى علمي</h3><p>مونتاج كامل لمقطع معلوماتي: بطاقات وتواريخ متحركة بهوية ذهبية، وترجمة على الكلام.</p></div></div>
+ <div class="reel"><video controls playsinline preload="none" poster="assets/poster-story.jpg" src="assets/story30.mp4"></video>
+  <div class="c"><div class="tags"><span>سلسلتي الخاصة</span></div><h3>قصة في 30 ثانية</h3><p>قصة كودو وماكدونالدز في نص دقيقة: خط زمني متحرك ونصوص تمشي مع الصوت.</p></div></div>
+ <div class="reel"><video controls playsinline preload="none" poster="assets/poster-intro.jpg" src="assets/bandar-intro.mp4"></video>
+  <div class="c"><div class="tags"><span>مشروع عميل</span></div><h3>بندر للحلول الرقمية | ريل</h3><p>مقدمة عمودية للشركة: سؤال يشد، ثم واجهة المنتج، ثم الشعار بنجمته المضيئة.</p></div></div>
+</div>
+<div class="wide">
+ <div class="reel"><video controls playsinline preload="none" poster="assets/poster-promo.jpg" src="assets/bandar-promo.mp4"></video>
+  <div class="c"><div class="tags"><span>مشروع عميل</span><span>1920×1080</span></div><h3>Bandar Solutions | فيديو تعريفي</h3><p>رحلة «من الفكرة إلى منتج يستخدمه الناس»: أرقام وبطاقات خدمات ومنتجات الشركة في قصة وحدة.</p></div></div>
+ <div class="reel"><video controls playsinline preload="none" poster="assets/poster-short.jpg" src="assets/bandar-short.mp4"></video>
+  <div class="c"><div class="tags"><span>مشروع عميل</span><span>20 ثانية</span></div><h3>Bandar Solutions | نسخة قصيرة</h3><p>نسخة مختصرة للإعلانات: «عندك فكرة؟» إلى «نصمّم» إلى الشعار وزر «ابدأ الآن».</p></div></div>
+</div>
+
+<h2 id="web">المواقع والمتاجر</h2>
+<p class="sub">مواقع شغّالة تقدر تجربها بنفسك، ومتجر سلة لعميلة.</p>
+
+
+
+<article class="proj">
+ <div class="mock" style="background:#2b1a10"><img src="assets/mog1.jpg" alt="واجهة موقع مقهوي"><img src="assets/mog2.jpg" alt="قائمة مقهوي"><img src="assets/mog3.jpg" alt="بكج مقهوي"></div>
+ <div class="body">
+  <h3>مقهوي | Moghwi's Cloud Coffee</h3>
+  <div class="tags"><span>مشروعي الخاص</span><span>موقع طلبات</span><span>هوية كاملة</span></div>
+  <p>مقهى من الأحساء: قهوة V60 تُحضَّر على الطلب، و«بُكج مقهوي» فيه قهوتك مع حلى عشوائي. بنيت الهوية كاملة (شعار يجمع السيرفر وإبريق القهوة بلون نحاسي)، وموقع فيه قائمة بخيار حار أو بارد، وسلة، وطلب يوصل على واتساب.</p>
+  <p class="val"><b>النتيجة:</b> العميل يطلب من جواله في ثلاث خطوات، بدون تطبيق ولا تسجيل.</p>
+  <div class="shots" style="margin-top:14px;border-radius:8px;overflow:hidden"><img src="assets/orig01.jpg" alt="شعار مقهوي"><img src="assets/orig02.jpg" alt="قائمة مقهوي المطبوعة"></div>
+  <a class="live" href="https://moghwi.netlify.app/">زور الموقع<small>moghwi.netlify.app</small></a>
+ </div>
+</article>
+
+<article class="proj">
+ <div class="mock" style="background:#1a0f12"><img src="assets/fpv1.jpg" alt="واجهة أفق FPV"><img src="assets/fpv2.jpg" alt="محتوى الدورة"><img src="assets/fpv3.jpg" alt="قسم من أنا"></div>
+ <div class="body">
+  <h3>أفق FPV | دورة تعليم طيران الدرون</h3>
+  <div class="tags"><span>مشروعي الخاص</span><span>صفحة بيع منتج</span><span>تصميم وبرمجة</span></div>
+  <p>صفحة بيع لدورة تعلّم طيران الدرون FPV من الصفر: عنوان واضح وسعر وزر طلب في أول الشاشة، ثم الأدوات اللي يحتاجها المبتدئ، ثم محتوى الدورة، ثم نبذة عن المدرب.</p>
+  <p class="val"><b>النتيجة:</b> زائر الصفحة يفهم وش يشتري وبكم ويطلب، كل هذا قبل ما ينزل تحت.</p>
+  <a class="live" href="https://fpv-academy.netlify.app/">زور الموقع<small>fpv-academy.netlify.app</small></a>
+ </div>
+</article>
+
+<article class="proj">
+ <div class="lap"><div class="scr"><div class="site">
+  <div class="nav"><b>by Soaad</b><span>القائمة ☰</span></div>
+  <img class="bn" src="assets/orig03.jpg" alt="بنر المتجر">
+  <div class="grid"><div><img src="assets/orig04.jpg" alt=""><small>٤٥ ر.س</small></div><div><img src="assets/orig05.jpg" alt=""><small>٦٥ ر.س</small></div><div><img src="assets/orig06.jpg" alt=""><small>٨٥ ر.س</small></div><div><img src="assets/orig07.jpg" alt=""><small>٩٥ ر.س</small></div></div>
+ </div></div><div class="base"></div></div>
+ <div class="body">
+  <h3>متجر by Soaad | مشغولات يدوية من الأحساء</h3>
+  <div class="tags"><span>مشروع عميل</span><span>متجر سلة</span><span>بنرات</span></div>
+  <p>صممت واجهة المتجر والبنرات: درجة فيروزي هادئة تبرز ألوان المنتجات، وصفحة تبدأ بالبنر ثم عناصر الثقة ثم أحدث المنتجات ثم آراء العملاء.</p>
+  <p class="val"><b>النتيجة:</b> تجربة شراء سهلة على الجوال، والمنتجات بأسعارها في أول الصفحة.</p>
+  <div class="phones"><img src="assets/orig08.jpg" alt=""><img src="assets/orig09.jpg" alt=""><img src="assets/orig10.jpg" alt=""></div>
+  <small class="cap">لقطات حقيقية من نسخة الجوال</small>
+ </div>
+</article>
+
+<h2>طريقة الشغل</h2>
+<div class="steps">
+ <div><b>نتكلم عن فكرتك</b><small>تقول لي وش تبي ولمين، وأقترح عليك الأسلوب.</small></div>
+ <div><b>عرض سعر واضح</b><small>سعر ثابت حسب حجم الشغل، و50% مقدم.</small></div>
+ <div><b>التنفيذ</b><small>خلال 2 إلى 4 أيام عمل، مع تعديلين مجانيين.</small></div>
+ <div><b>التسليم</b><small>ملفات جاهزة للنشر، أو موقع شغّال برابط.</small></div>
+</div>
+
+<h2>الأدوات</h2>
+<div class="tools"><span>Adobe Premiere</span><span>CapCut</span><span>Canva</span><span>Figma</span><span>ElevenLabs</span><span>Salla</span></div>
+
+<section class="end" id="contact">
+ <h2>عندك محل أو مشروع؟ خلنا نبدأ</h2>
+ <p>أرسل لي فكرتك، وأرد عليك بخطة تنفيذ وسعر يناسب حجم مشروعك.</p>
+ <a class="btn" href="https://wa.me/966532119991">واتساب</a><a class="btn" href="mailto:abood.haytham1@gmail.com">abood.haytham1@gmail.com</a>
+ <div class="social"><a href="https://www.tiktok.com/@abdullah.h_13">TikTok: abdullah.h_13</a><a href="https://instagram.com/bo_haytham13">Instagram: bo_haytham13</a></div>
+</section>
+<footer>عبدالله هيثم | Abdullah</footer>
+</main>
+</body>
+</html>

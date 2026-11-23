@@ -6,19 +6,28 @@
   "dinoRise": 0,
   "dinoLand": 16,
   "bubbleIn": 8,
-  "wordsIn": [47, 67, 102, 131],
+  "wordsIn": [
+    47,
+    67,
+    102,
+    131
+  ],
   "scene2Out": 134,
   "line3In": 143,
   "countStart": 168,
   "countEnd": 205,
   "perDayIn": 222,
   "scene3Out": 248,
-  "jumps": [254, 284],
+  "jumps": [
+    254,
+    284
+  ],
   "celebrateIn": 256,
   "celebrate2In": 285,
   "scene4Out": 300,
   "logoIn": 304,
   "offerIn": 311,
   "locationIn": 400,
-  "creditIn": 465
+  "creditIn": 465,
+  "voiceEnd": 483
 }

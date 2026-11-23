@@ -590,9 +590,15 @@ export const DinoLand: React.FC = () => {
   const starY = (j: number) => DINO_BOTTOM - DINO_H + 260 + jumpY(j + 12, j);
   return (
     <AbsoluteFill style={{background: COLORS.bg, overflow: 'hidden'}}>
-      <Audio src={staticFile('music.wav')} volume={0.32} />
+      {/* music ducks under the voice, comes back up only after the last word */}
+      <Audio
+        src={staticFile('music.wav')}
+        volume={(f) =>
+          interpolate(f, [0, T.voiceIn, T.voiceEnd, T.voiceEnd + 8], [0.25, 0.09, 0.09, 0.25], clamp)
+        }
+      />
       <Sequence from={T.voiceIn}>
-        <Audio src={staticFile('voice.mp3')} volume={1} />
+        <Audio src={staticFile('voice.wav')} volume={1} />
       </Sequence>
       <Blobs />
       <Hill baseY={1470} amp={38} len={620} speed={0.6} color={COLORS.lime} offset={0} />

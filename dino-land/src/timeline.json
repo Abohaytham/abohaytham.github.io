@@ -1,0 +1,22 @@
+{
+  "fps": 30,
+  "durationInFrames": 450,
+  "bpm": 120,
+  "dinoRise": 0,
+  "dinoLand": 16,
+  "bubbleIn": 24,
+  "wordsIn": [78, 90, 102, 114],
+  "scene2Out": 142,
+  "line3In": 153,
+  "countStart": 180,
+  "countEnd": 228,
+  "perDayIn": 230,
+  "scene3Out": 248,
+  "jumps": [255, 285],
+  "celebrateIn": 262,
+  "scene4Out": 324,
+  "logoIn": 333,
+  "offerIn": 356,
+  "locationIn": 372,
+  "creditIn": 420
+}

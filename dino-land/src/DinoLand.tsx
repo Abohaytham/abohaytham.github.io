@@ -2,6 +2,7 @@ import React from 'react';
 import {
   AbsoluteFill,
   Audio,
+  Sequence,
   Easing,
   Img,
   interpolate,
@@ -429,7 +430,7 @@ const CounterScene: React.FC = () => {
 const CelebrateScene: React.FC = () => {
   const frame = useCurrentFrame();
   const a = usePop(T.celebrateIn, 9);
-  const b = usePop(T.celebrateIn + 8, 8);
+  const b = usePop(T.celebrate2In, 8);
   if (frame < T.celebrateIn - 2 || frame > T.scene4Out + 12) return null;
   const out = exitProgress(frame, T.scene4Out, 9);
   const wiggle = Math.sin(frame / 4) * 3 * b;
@@ -589,7 +590,10 @@ export const DinoLand: React.FC = () => {
   const starY = (j: number) => DINO_BOTTOM - DINO_H + 260 + jumpY(j + 12, j);
   return (
     <AbsoluteFill style={{background: COLORS.bg, overflow: 'hidden'}}>
-      <Audio src={staticFile('music.wav')} />
+      <Audio src={staticFile('music.wav')} volume={0.32} />
+      <Sequence from={T.voiceIn}>
+        <Audio src={staticFile('voice.mp3')} volume={1} />
+      </Sequence>
       <Blobs />
       <Hill baseY={1470} amp={38} len={620} speed={0.6} color={COLORS.lime} offset={0} />
       <Twinkles />

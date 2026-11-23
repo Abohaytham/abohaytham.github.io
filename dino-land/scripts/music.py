@@ -112,7 +112,7 @@ cs, ce = T['countStart'], T['countEnd']
 last = None
 for fr in range(cs, ce + 1):
     p = (fr - cs) / (ce - cs); v = round(55 - (55 - 26) * (1 - (1 - p) ** 3))
-    if v != last: add(sweep(1800, 1400, 0.025, 0.008), f(fr), 0.12); last = v
+    if v != last: add(sweep(1800, 1400, 0.025, 0.008), f(fr), 0.06); last = v
 for k, m in enumerate([84, 91]): add(glock(m, 1.2), f(ce) + 0.08 * k, 0.4)
 add(pop(), f(T['perDayIn']), 0.35)
 for j in T['jumps']:
